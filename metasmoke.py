@@ -60,3 +60,24 @@ class Metasmoke:
 
         except Exception as e:
             print e
+
+    @classmethod
+    def get_privileged_users(self):
+        try:
+            response = requests.get(GlobalVars.metasmoke_host + "/privileged.json")
+        except Exception as ex:
+            print(ex)
+
+        users = {}
+        if response.status_code == 200:
+            resp_json = response.json()
+            for item in resp_json:
+                if item['room_id'] not in users:
+                    users[item['room_id']] = []
+                users[item['room_id']].append(item['user_id'])
+
+        with open("privilegedUsers.json", "w") as f:
+            try:
+                f.write(json.dumps(users))
+            except ValueError as ex:
+                print(ex)

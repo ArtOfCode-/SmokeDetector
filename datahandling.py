@@ -57,6 +57,13 @@ def load_files():
         except EOFError:
             os.remove("bodyfetcherQueue.txt")
             raise
+    if os.path.isfile("privilegedUsers.json"):
+        try:
+            with open("privilegedUsers.json", "r") as f:
+                GlobalVars.privileged_users = json.load(f)
+        except ValueError as ex:
+            print("""Decoding privileged users JSON data has failed. Verify the validity of the
+                     JSON file, or download a fresh copy from metasmoke.""")
 
 
 def filter_auto_ignored_posts():

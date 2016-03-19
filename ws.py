@@ -42,6 +42,7 @@ else:
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
 
+Metasmoke.get_privileged_users()
 load_files()
 filter_auto_ignored_posts()
 

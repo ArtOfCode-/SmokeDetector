@@ -3,8 +3,8 @@ import regex
 
 
 def likely_vlq(s, site):
-    if len(s) <= 200:
-        reg = regex.compile(ur"(?i)((present|past)( perfect)?|modals?|auxiliar(y|ies))")
+    if len(s) <= 222:
+        reg = regex.compile(ur"(?i)((present|past)( perfect)?|modals?|auxiliar(y|ies)|gerund)")
         if reg.findall(s):
             match = "".join(["".join(match) for match in matches])
             return True, "Short post mentioning {}".format(match)
@@ -12,8 +12,8 @@ def likely_vlq(s, site):
     return False, ""
 
 def confusion(s, site):
-    if len(s) <= 200:
-        reg = regex.compile(ur"(?i)(confused|don\'t understand|hav(ing)? problems?)")
+    if len(s) <= 222:
+        reg = regex.compile(ur"(?i)(confused?|(don\'?t|do ?not) understand|hav(e|ing)? problems?|difficulty?)")
         if reg.search(s):
             return True, "Confusion in a short post"
 
@@ -52,7 +52,7 @@ class FindSpam:
         {'method': likely_vlq, 'all': False,
          'sites': ['english.stackexchange.com'], 'reason': 'possible low-quality post', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': ur"(?i)can.{0,15}(explain|help) (to )?me", 'all': False,
+        {'regex': ur"(?i)(anyone )?(can.{0,15}(exp(la|al)in|help) ((to )?me|it)|.{0,15}(answer|resolve) (my )?(problem|question))", 'all': False,
          'sites': ['english.stackexchange.com'], 'reason': 'request for explanation', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'method': confusion, 'all': False,

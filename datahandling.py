@@ -307,7 +307,7 @@ def refresh_sites():
     has_more = True
     page = 1
     while has_more:
-        response = requests.get("https://api.stackexchange.com/2.2/sites?filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page=" + str(page) + "&key=IAkbitmze4B8KpacUfLqkw((")
+        response = requests.get("https://api.stackexchange.com/2.2/sites?filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page=" + str(page) + "&key=lKfzuApO1ASY*NegoDzU0g((")
         data = json.loads(response.text)
         if "error_message" in data:
             return False, data["error_message"]

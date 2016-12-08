@@ -13,7 +13,7 @@ def likely_vlq(s, site):
 
 def confusion(s, site):
     if len(s) <= 222:
-        reg = regex.compile(ur"(?i)(confused?|(don\'?t|do ?not) understand|hav(e|ing)? problems?|difficulty?)")
+        reg = regex.compile(ur"(?i)(confused?|(don\'?t|do ?not) understand|hav(e|ing)? problems?|difficulty?|differen(ce|t))")
         if reg.search(s):
             return True, "Confusion in a short post"
 

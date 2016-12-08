@@ -22,7 +22,7 @@ class GlobalVars:
     charcoal_room_id = "11540"
     meta_tavern_room_id = "89"
     socvr_room_id = "41570"
-    blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 0, socvr_room_id: 0}
+    blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 3.2e7, socvr_room_id: 3.2e7}
 
     experimental_reasons = []  # Don't widely report these
     non_socvr_reasons = []    # Don't report to SOCVR
@@ -48,201 +48,15 @@ class GlobalVars:
     wrapso = Client("stackoverflow.com")
     privileged_users = {
         charcoal_room_id: [
-            "117490",   # Normal Human
-            "66258",    # Andy
-            "31768",    # ManishEarth
-            "103081",   # hichris123
             "73046",    # Undo
-            "88521",    # ProgramFOX
-            "59776",    # Doorknob
-            "31465",    # Seth
-            "88577",    # Santa Claus
-            "34124",    # Andrew Leach
-            "54229",    # apnorton
-            "20459",    # S.L. Barth
-            "32436",    # tchrist
-            "30477",    # Brock Adams
-            "58529",    # ferrybig
-            "145208",   # Robert Longson
-            "178825",   # Ms Yvette
-            "171800",   # JAL
-            "64978",    # PeterJ
-            "125141",   # Jeffrey Bosboom
-            "54902",    # bummi
-            "135450",   # M.A.R.
-            "145604",   # Quill
-            "60548",    # rene
-            "121401",   # michaelpri
-            "116218",   # JamesENL
-            "82927",    # Braiam
-            "11606",    # bwDraco
-            "19761",    # Ilmari Karonen
-            "108271",   # Andrew T.
-            "171054",   # Magisch
-            "190011",   # Petter Friberg
-            "165661",   # Tunaki
-            "145086",   # Wai Ha Lee
-            "137665",   # ByteCommander
-            "147884",   # wythagoras
-            "186395",   # Åna
-            "193364",   # Ashish Ahuja
-            "163686",   # Gothdo
-            "145827",   # angussidney
-            "244748",   # Supreme Leader SnokeDetector (angussidney's sock)
             "121520",   # ArtOfCode
-            "244382",   # Lt. A. Code (ArtOfCode's sock to test things with)
-            "137388",   # QPaysTaxes
-            "212311",   # Ryan Bemrose
-            "172397",   # Kyll
-            "224538",   # FrankerZ
-            "61202",    # OldSkool
-            "56166",    # Jan Dvorak
-            "133966",   # DavidPostill
-            "22839",    # djsmiley2k
-            "97389",    # Kaz Wolfe
-            "144962",   # DJMcMayhem
-            "139423",   # NobodyNada
-            "62118",    # tripleee
-            "130558",   # Registered User
-            "128113",   # arda
             "164318",   # Glorfindel
-            "175347",  # Floern
-            "180274"  # Alexander O'Mara
+            "56166",    # Jan Dvorak
+            "68718",    # Wrzlprmft
+            "62118"     # tripleee
         ],
-        meta_tavern_room_id: [
-            "315433",   # Normal Human
-            "244519",   # CRABOLO
-            "244382",   # TGMCians
-            "194047",   # Jan Dvorak
-            "158100",   # rene
-            "178438",   # Manishearth
-            "237685",   # hichris123
-            "215468",   # Undo
-            "229438",   # ProgramFOX
-            "180276",   # Doorknob
-            "161974",   # Lynn Crumbling
-            "186281",   # Andy
-            "266094",   # Unihedro
-            "245167",   # Infinite Recursion
-            "230261",   # Jason C
-            "213575",   # Braiam
-            "241919",   # Andrew T.
-            "203389",   # backwards-Seth
-            "202832",   # Mooseman
-            "160017",   # bwDraco
-            "201151",   # bummi
-            "188558",   # Frank
-            "229166",   # Santa Claus
-            "159034",   # Kevin Brown
-            "203972",   # PeterJ
-            "188673",   # Alexis King
-            "258672",   # AstroCB
-            "227577",   # Sam
-            "255735",   # cybermonkey
-            "279182",   # Ixrec
-            "271104",   # James
-            "220428",   # Qantas 94 Heavy
-            "153355",   # tchrist
-            "238426",   # Ed Cottrell
-            "166899",   # Second Rikudo
-            "287999",   # ASCIIThenANSI
-            "208518",   # JNat
-            "284141",   # michaelpri
-            "260312",   # vaultah
-            "244062",   # SouravGhosh
-            "152859",   # Shadow Wizard
-            "201314",   # apnorton
-            "280934",   # M.A.Ramezani
-            "200235",   # durron597
-            "148310",   # Awesome Poodles / Brock Adams
-            "168333",   # S.L. Barth
-            "257207",   # Unikitty
-            "244282",   # DroidDev
-            "163250",   # Cupcake
-            "298265",   # BoomsPlus
-            "253560",   # josilber
-            "244254",   # misterManSam
-            "188189",   # Robert Longson
-            "174699",   # Ilmari Karonen
-            "202362",   # chmod 666 telkitty
-            "289717",   # Quill
-            "237813",   # bjb568
-            "311345",   # Simon Klaver
-            "171881",   # rekire
-            "260388",   # Pandya
-            "310756",   # Ms Yvette
-            "262399",   # Jeffrey Bosboom
-            "242209",   # JAL
-            "280883",   # ByteCommander
-            "302251",   # kos
-            "262823",   # ArtOfCode
-            "215067",   # Ferrybig
-            "308386",   # Magisch
-            "285368"    # angussidney
-        ],
-        socvr_room_id: [
-            "1849664",  # Undo
-            "2581872",  # hichris123
-            "1198729",  # Manishearth
-            "3717023",  # Normal Human aka 1999
-            "2619912",  # ProgramFOX
-            "578411",   # rene
-            "1043380",  # gunr2171
-            "2246344",  # Sam
-            "2756409",  # TylerH
-            "1768232",  # durron597
-            "359284",   # Kevin Brown
-            "258400",   # easwee
-            "3622940",  # Unihedron
-            "3204551",  # Deduplicator
-            "4342498",  # NathanOliver
-            "4639281",  # Tiny Giant
-            "3093387",  # josilber
-            "1652962",  # cimmanon
-            "1677912",  # Mogsdad
-            "656243",   # Lynn Crumbling
-            "3933332",  # Rizier123
-            "2422013",  # cybermonkey
-            "3478852",  # Nisse Engström
-            "2302862",  # Siguza
-            "1324",     # Paul Roub
-            "1743880",  # Tunaki
-            "1663001",  # DavidG
-            "2415822",  # JAL
-            "4174897",  # Kyll
-            "5299236",  # Kevin Guan
-            "4050842",  # Thaillie
-            "1816093",  # Drew
-            "874188",   # Triplee
-            "880772",   # approxiblue
-            "1835379",  # Cerbrus
-            "3956566",  # JamesENL
-            "2357233",  # Ms Yvette
-            "3155639",  # AlexanderOMara
-            "462627",   # Praveen Kumar
-            "4490559",  # intboolstring
-            "1364007",  # Wai Ha Lee
-            "1699210",  # bummi
-            "563532",   # Rob
-            "5389107",  # Magisch
-            "4099593",  # bhargav-rao
-            "1542723",  # Ferrybig
-            "2025923",  # Tushar
-            "5292302",  # Petter Friberg
-            "792066",   # Braiam
-            "5666987",  # Ian
-            "3160466",  # ArtOfCode
-            "5735775",  # Ashish Ahuja
-            "3476191",  # Nobody Nada
-            "2227743",  # Eric D
-            "821878",   # Ryan Bemrose
-            "1413395",  # Panta Rei
-            "4875631",  # FrankerZ
-            "2958086",  # Compass
-            "499214",   # JanDvorak
-            "5647260",  # Andrew L.
-            "559745"  # Floern
-        ]
+        meta_tavern_room_id: [],
+        socvr_room_id: []
     }
 
     code_privileged_users = None

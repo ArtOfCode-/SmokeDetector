@@ -4,7 +4,7 @@ import regex
 
 def likely_vlq(s, site):
     if len(s) <= 222:
-        reg = regex.compile(ur"(?i)((present|past)( perfect)?|modals?|auxiliar(y|ies)|gerund)")
+        reg = regex.compile(ur"(?i)((present|past)( perfect)?|modals?|auxiliar(y|ies)|gerund|differen(t|ce))")
         matches = reg.findall(s)
         if matches:
             match = "".join(["".join(match) for match in matches])
@@ -14,7 +14,7 @@ def likely_vlq(s, site):
 
 def confusion(s, site):
     if len(s) <= 222:
-        reg = regex.compile(ur"(?i)(confused?|(don\'?t|do ?not) understand|hav(e|ing)? problems?|difficulty?)")
+        reg = regex.compile(ur"(?i)(confused?|(don\'?t|do ?not) understand|hav(e|ing)? problems?|difficult(y|ies)?)")
         if reg.search(s):
             return True, "Confusion in a short post"
 

@@ -44,9 +44,11 @@ def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
         GlobalVars.charcoal_hq.send_message(msg, length_check)
     elif room_id_str == GlobalVars.meta_tavern_room_id:
-        GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
+        #GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
+        pass
     elif room_id_str == GlobalVars.socvr_room_id:
-        GlobalVars.socvr.send_message(msg, length_check)
+        #GlobalVars.socvr.send_message(msg, length_check)
+        pass
 
 
 def is_report(post_site_id):

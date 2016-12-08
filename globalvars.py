@@ -19,7 +19,7 @@ class GlobalVars:
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
     latest_questions = []
     api_backoff_time = 0
-    charcoal_room_id = "11540"
+    charcoal_room_id = "49780"
     meta_tavern_room_id = "89"
     socvr_room_id = "41570"
     blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 3.2e7, socvr_room_id: 3.2e7}

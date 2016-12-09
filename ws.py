@@ -161,8 +161,8 @@ GlobalVars.tavern_on_the_meta.join()
 GlobalVars.socvr.join()
 
 GlobalVars.charcoal_hq.watch_socket(watcher)
-GlobalVars.tavern_on_the_meta.watch_socket(watcher)
-GlobalVars.socvr.watch_socket(watcher)
+#GlobalVars.tavern_on_the_meta.watch_socket(watcher)
+#GlobalVars.socvr.watch_socket(watcher)
 for room in GlobalVars.specialrooms:
     if "watcher" in room:
         room["room"].join()

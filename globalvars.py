@@ -53,7 +53,8 @@ class GlobalVars:
             "164318",   # Glorfindel
             "56166",    # Jan Dvorak
             "68718",    # Wrzlprmft
-            "62118"     # tripleee
+            "62118",    # tripleee
+            "145827"    # angussidney
         ],
         meta_tavern_room_id: [],
         socvr_room_id: []
